@@ -1,0 +1,6 @@
+interface:
+  display_name: "Start From Reality / 从实际出发"
+  short_description: "帮助你克服拖延、进入专注状态，并减少压力和自我否定"
+  default_prompt: "Use $start-from-reality to find my real bottleneck and give me one honest 5–15 minute action now."
+policy:
+  allow_implicit_invocation: true

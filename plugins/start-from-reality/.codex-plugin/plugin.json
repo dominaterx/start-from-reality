@@ -1,0 +1,32 @@
+{
+  "name": "start-from-reality",
+  "version": "0.2.1",
+  "description": "Overcome procrastination, enter focus more easily, and regain a sense of control without added shame.",
+  "author": {
+    "name": "xnaki and contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "procrastination",
+    "decision-making",
+    "learning",
+    "planning",
+    "feedback"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Start From Reality / 从实际出发",
+    "shortDescription": "Overcome procrastination and enter focus with less pressure.",
+    "longDescription": "A bilingual AI skill that helps you overcome procrastination, begin work or study, and regain a sense of control without added shame. It turns fear, uncertainty, and distant goals into one grounded, testable next move.",
+    "developerName": "xnaki and contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "I cannot start. Give me one safe 5–15 minute move on the real task.",
+      "我明明想开始，却被失败恐惧卡住了。帮我做一个现实的小行动。",
+      "Find today's main bottleneck without neglecting everything else."
+    ]
+  }
+}

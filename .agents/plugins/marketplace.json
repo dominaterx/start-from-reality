@@ -1,0 +1,20 @@
+{
+  "name": "start-from-reality",
+  "interface": {
+    "displayName": "Start From Reality"
+  },
+  "plugins": [
+    {
+      "name": "start-from-reality",
+      "source": {
+        "source": "local",
+        "path": "./plugins/start-from-reality"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
