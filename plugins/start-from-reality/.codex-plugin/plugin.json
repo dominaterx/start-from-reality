@@ -3,8 +3,11 @@
   "version": "0.2.1",
   "description": "Overcome procrastination, enter focus more easily, and regain a sense of control without added shame.",
   "author": {
-    "name": "xnaki and contributors"
+    "name": "dominaterx and contributors",
+    "url": "https://github.com/dominaterx"
   },
+  "homepage": "https://github.com/dominaterx/start-from-reality#readme",
+  "repository": "https://github.com/dominaterx/start-from-reality",
   "license": "MIT",
   "keywords": [
     "procrastination",
@@ -18,7 +21,7 @@
     "displayName": "Start From Reality / 从实际出发",
     "shortDescription": "Overcome procrastination and enter focus with less pressure.",
     "longDescription": "A bilingual AI skill that helps you overcome procrastination, begin work or study, and regain a sense of control without added shame. It turns fear, uncertainty, and distant goals into one grounded, testable next move.",
-    "developerName": "xnaki and contributors",
+    "developerName": "dominaterx and contributors",
     "category": "Productivity",
     "capabilities": [
       "Interactive"

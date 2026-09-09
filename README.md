@@ -45,14 +45,14 @@ The framework is non-coercive. It is not political instruction, clinical treatme
 
 ## Install and use
 
-Publishing this repository on GitHub does **not** automatically place it in the universal plugin directory; directory publication is a separate review process. Until then, download or clone the repository and add its root folder as a local marketplace in the Codex app. Refresh the app, install **Start From Reality / 从实际出发**, and start a new conversation.
+Publishing this repository on GitHub does **not** automatically place it in the universal plugin directory; directory publication is a separate review process. Until then, add `dominaterx/start-from-reality` as a GitHub marketplace in the Codex app, refresh the app, install **Start From Reality / 从实际出发**, and start a new conversation.
 
 Invoke `$start-from-reality` explicitly, or describe a matching blockage and let it trigger implicitly. ChatGPT and Codex share the universal plugin directory if the project is accepted there later.
 
-CLI users can instead open a terminal in the repository root:
+CLI users can install directly from GitHub:
 
 ```powershell
-codex plugin marketplace add .
+codex plugin marketplace add dominaterx/start-from-reality
 codex plugin add start-from-reality@start-from-reality
 ```
 

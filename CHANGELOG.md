@@ -4,6 +4,7 @@
 
 - Rewrote the first-screen bilingual copy around user outcomes: overcoming procrastination, entering focus, regaining control, and reducing self-blame.
 - Aligned plugin-card metadata with the same benefit-first positioning.
+- Added the public repository identity and GitHub marketplace installation path.
 
 ## 0.2.0 - 2026-09-09
 
