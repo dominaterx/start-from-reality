@@ -104,7 +104,7 @@ python scripts/validate_repo.py
 
 ## Privacy
 
-The plugin declares no MCP server, app connector, network dependency, account access, or telemetry, and it does not independently transmit data. The host model may still use files or tools that the user separately provides or enables.
+The plugin declares no MCP server, app connector, network dependency, account access, or telemetry, and it does not independently transmit data. The host model may still use files or tools that the user separately provides or enables. See [PRIVACY.md](PRIVACY.md).
 
 ## Contributing
 

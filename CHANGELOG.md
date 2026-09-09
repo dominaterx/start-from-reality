@@ -1,9 +1,11 @@
 # Changelog
 
-## Unreleased
+## 0.3.0 - 2026-09-10
 
 - Replaced the abstract example with a bilingual, behavior-first walkthrough based on a successful clean installation test.
 - Moved the demonstration directly below the opening pitch so visitors can see the interaction before reading the framework.
+- Added directory-ready listing metadata, square branding assets, public support and privacy links, and five positive plus three negative review cases.
+- Added stricter repository checks for the OpenAI public plugin directory limits.
 
 ## 0.2.1 - 2026-09-09
 

@@ -1,9 +1,9 @@
 {
   "name": "start-from-reality",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Overcome procrastination, enter focus more easily, and regain a sense of control without added shame.",
   "author": {
-    "name": "dominaterx and contributors",
+    "name": "dominaterx",
     "url": "https://github.com/dominaterx"
   },
   "homepage": "https://github.com/dominaterx/start-from-reality#readme",
@@ -19,17 +19,26 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Start From Reality / 从实际出发",
-    "shortDescription": "Overcome procrastination and enter focus with less pressure.",
-    "longDescription": "A bilingual AI skill that helps you overcome procrastination, begin work or study, and regain a sense of control without added shame. It turns fear, uncertainty, and distant goals into one grounded, testable next move.",
-    "developerName": "dominaterx and contributors",
+    "shortDescription": "Overcome procrastination",
+    "longDescription": "Start From Reality helps when procrastination, perfectionism, overwhelm, or fear of distant failure makes a task feel too threatening to touch. Instead of demanding motivation or prescribing a grand plan, it lowers the cost of first contact and proposes one bounded action on the real task.\n\nAs the user responds, the skill checks present conditions, identifies the current bottleneck, runs a small pilot, and revises from evidence. Once real work begins, it leaves coaching mode and helps with the task itself.\n\n从实际出发帮助被拖延、完美主义、混乱或遥远失败感困住的人真正开始。它不靠羞辱和鸡汤逼迫行动，而是降低第一次接触任务的威胁，调查当前事实，找到主要卡点，进行一个可停止的小试点，再根据反馈调整。进入工作后，它会退出教练模式，转而处理任务本身。",
+    "developerName": "dominaterx",
     "category": "Productivity",
     "capabilities": [
-      "Interactive"
+      "Break avoidance into one safe, bounded contact with the real task",
+      "Turn distant-failure anxiety into present, testable action",
+      "Find the current bottleneck from observable facts",
+      "Use short pilots and feedback instead of rigid long-range plans",
+      "Stop coaching once real work begins and hand off to the task"
     ],
     "defaultPrompt": [
-      "I cannot start. Give me one safe 5–15 minute move on the real task.",
-      "我明明想开始，却被失败恐惧卡住了。帮我做一个现实的小行动。",
-      "Find today's main bottleneck without neglecting everything else."
-    ]
+      "I need to start, but fear of failing keeps me from opening the work. Help me take the first real step.",
+      "我一想到几个月后可能失败，就连资料都不敢打开。不要长期计划，帮我现在开始。",
+      "Too many tasks are competing for attention. Help me find today's real bottleneck and run one small pilot."
+    ],
+    "websiteURL": "https://github.com/dominaterx/start-from-reality",
+    "privacyPolicyURL": "https://github.com/dominaterx/start-from-reality/blob/main/PRIVACY.md",
+    "brandColor": "#17324D",
+    "composerIcon": "./assets/composer-icon.svg",
+    "logo": "./assets/logo.svg"
   }
 }

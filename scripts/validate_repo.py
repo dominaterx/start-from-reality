@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 
@@ -45,11 +46,76 @@ interface = manifest.get("interface", {})
 for field in ("displayName", "shortDescription", "longDescription", "developerName", "category"):
     if not interface.get(field):
         fail(f"plugin interface.{field} is required")
+if len(interface["displayName"]) > 30:
+    fail("plugin interface.displayName exceeds the directory limit of 30 characters")
+if "\n" in interface["shortDescription"] or len(interface["shortDescription"]) > 30:
+    fail("plugin interface.shortDescription must be one line and at most 30 characters")
+if len(interface["longDescription"]) > 4000:
+    fail("plugin interface.longDescription exceeds the directory limit of 4000 characters")
+if len(interface["developerName"]) > 80:
+    fail("plugin interface.developerName exceeds the directory limit of 80 characters")
+if manifest.get("author", {}).get("name") != interface["developerName"]:
+    fail("plugin author.name and interface.developerName must match")
+allowed_categories = {
+    "Productivity",
+    "Creativity",
+    "Developer Tools",
+    "Business & Operations",
+    "Data & Analytics",
+    "Communication",
+    "Education & Research",
+    "Security",
+    "Finance",
+    "Healthcare",
+    "Travel",
+    "Entertainment",
+    "Other",
+}
+if interface["category"] not in allowed_categories:
+    fail("plugin interface.category is not supported by the public directory")
+capabilities = interface.get("capabilities", [])
+if not isinstance(capabilities, list) or len(capabilities) > 20:
+    fail("plugin interface.capabilities must be a list of at most 20 strings")
+if any(not isinstance(item, str) or not item.strip() or "\n" in item or len(item) > 120 for item in capabilities):
+    fail("each capability must be one non-empty line of at most 120 characters")
 prompts = interface.get("defaultPrompt")
 if not isinstance(prompts, list) or not 1 <= len(prompts) <= 3:
     fail("plugin interface.defaultPrompt must contain one to three prompts")
-if any(not isinstance(prompt, str) or not prompt.strip() or len(prompt) > 128 for prompt in prompts):
-    fail("each default prompt must be a non-empty string of at most 128 characters")
+if any(not isinstance(prompt, str) or not prompt.strip() or "\n" in prompt or len(prompt) > 128 for prompt in prompts):
+    fail("each default prompt must be one non-empty line of at most 128 characters")
+if len({" ".join(prompt.split()) for prompt in prompts}) != len(prompts):
+    fail("plugin interface.defaultPrompt entries must be unique")
+if any("@" in prompt for prompt in prompts):
+    fail("plugin interface.defaultPrompt entries must not contain MCP mentions")
+
+for field in ("websiteURL", "privacyPolicyURL"):
+    value = interface.get(field)
+    if value and (not isinstance(value, str) or not value.startswith("https://") or len(value) > 1024):
+        fail(f"plugin interface.{field} must be an HTTPS URL of at most 1024 characters")
+
+for field in ("logo", "composerIcon"):
+    value = interface.get(field)
+    if not isinstance(value, str) or not value.startswith("./"):
+        fail(f"plugin interface.{field} must be a relative asset path beginning with ./")
+    asset = PLUGIN / value[2:]
+    if not asset.is_file():
+        fail(f"plugin interface.{field} points to a missing file")
+    if asset.suffix.lower() == ".svg":
+        try:
+            svg = ET.parse(asset).getroot()
+        except ET.ParseError as exc:
+            fail(f"plugin interface.{field} SVG is malformed: {exc}")
+        if svg.tag.rsplit("}", 1)[-1] != "svg":
+            fail(f"plugin interface.{field} SVG root element is not <svg>")
+        view_box = svg.attrib.get("viewBox", "").split()
+        if len(view_box) != 4:
+            fail(f"plugin interface.{field} SVG must have a numeric viewBox")
+        try:
+            width, height = float(view_box[2]), float(view_box[3])
+        except ValueError:
+            fail(f"plugin interface.{field} SVG viewBox is not numeric")
+        if width != height or width < 48:
+            fail(f"plugin interface.{field} SVG must be square and at least 48 by 48")
 
 changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 if f"## {version} " not in changelog:
