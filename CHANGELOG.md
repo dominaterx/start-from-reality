@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Replaced the abstract example with a bilingual, behavior-first walkthrough based on a successful clean installation test.
+- Moved the demonstration directly below the opening pitch so visitors can see the interaction before reading the framework.
+
 ## 0.2.1 - 2026-09-09
 
 - Rewrote the first-screen bilingual copy around user outcomes: overcoming procrastination, entering focus, regaining control, and reducing self-blame.

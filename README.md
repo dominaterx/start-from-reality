@@ -7,6 +7,22 @@
 试试看吧——你不需要一下子改变整个人生，只需要开始眼前的一小步。<br>
 *Give it a try. You don't have to fix your whole life at once. Just begin with the next small step.*
 
+## 30 秒看懂 / See it in 30 seconds
+
+> **你：** 我知道今晚应该学习，但一想到三个月后的考试可能失败，就不敢打开资料。不要给我长期计划，帮我现在开始。
+>
+> **Skill：** 现在别想“三个月后能不能过”，那个问题今晚解决不了，也不需要解决。你现在唯一的任务是：把要学的资料打开。不要学习，不要看目录，不要制定计划。只是打开。打开之后就停在那里，回来告诉我：“开了”。
+
+它不会在你回复“开了”之后突然扔来一张宏伟计划，而是根据真实反馈逐级推进：
+
+`打开资料 → 读一句 → 再读一句 → 连续读 3 分钟 → 处理一个真实难点`
+
+*It does not answer “opened” with a grand plan. It uses real feedback to increase contact gradually: open the material, read one sentence, read another, continue for three minutes, then work on one concrete point of confusion.*
+
+这不是降低目标，而是先降低接触任务的威胁，再让真实行动取代对遥远失败的想象。一旦你已经进入工作，它就停止谈论“如何开始”，转而帮助你处理任务本身。
+
+*This does not lower the goal. It lowers the threat of first contact so real action can replace imagined failure. Once you are working, the coach stops discussing productivity and helps with the task itself.*
+
 ## 它解决什么
 
 很多卡住并不是缺少道理，而是三个问题叠在一起：任务被遥远失败放大，现实情况没有查清，计划又试图一次解决整个未来。本插件把它们接成一个闭环：
@@ -36,12 +52,6 @@ The framework is non-coercive. It is not political instruction, clinical treatme
 - **Evidence before confidence / 证据先于自信：** the first move touches the real task and teaches us what is actually blocking progress.
 - **Support without shame / 支持但不羞辱：** it treats avoidance as information without pretending continued avoidance has no cost.
 - **A coach that exits / 会主动退出的教练：** once real work begins, it stops discussing productivity and helps with the work itself.
-
-## 一个 60 秒例子
-
-**输入：** “期末还有几个月，但我一想到挂科就不敢打开概率论。”
-
-**输出方向：** 先把“打开资料”等同于“接受最终判决”的联结拆开；然后只打开真实习题，抄第一题条件并圈出不认识的符号，五分钟可停。这个痕迹会告诉我们，下一步主要问题是概念识别、题型判断还是启动威胁。
 
 ## Install and use
 
